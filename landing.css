@@ -1,0 +1,581 @@
+/* =========================
+   RESET
+   تنظیمات پایه‌ی صفحه
+========================= */
+
+/* محاسبه‌ی padding و border داخل عرض و ارتفاع المان‌ها */
+* {
+  box-sizing: border-box;
+}
+
+/* اسکرول نرم هنگام کلیک روی لینک‌های داخلی */
+html {
+  scroll-behavior: smooth;
+}
+
+/* تنظیمات کلی بدنه‌ی صفحه */
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #351817;
+  background-color: #FFF9F4;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   VARIABLES
+   متغیرهای رنگ و سایه
+========================= */
+
+:root {
+  /* رنگ‌های قرمز */
+  --red-dark: #65141A;
+  --red: #8F1D25;
+  --red-light: #B52A32;
+
+  /* رنگ‌های کرم */
+  --cream: #FFF9F4;
+  --cream-dark: #F4E8DA;
+
+  /* رنگ‌های قهوه‌ای */
+  --brown: #351817;
+  --brown-light: #6B5048;
+
+  /* طلایی و سفید */
+  --gold: #C69A5B;
+  --white: #FFFFFF;
+
+  /* سایه‌ی کارت‌ها */
+  --shadow: 0 10px 30px rgba(53, 24, 23, 0.08);
+}
+
+/* کلاس highlight (با جاوا اسکریپت روی h1 اضافه می‌شود) */
+.highlight {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+   هدر صفحه
+========================= */
+
+header {
+  padding: 32px 20px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--red-dark);
+  position: relative;
+}
+
+/* انیمیشن نرم برای هدر */
+.s {
+  transition: all 0.3s;
+}
+
+/* سایه‌ی هدر هنگام اسکرول (کلاس scrolled با جاوا اسکریپت اضافه می‌شود) */
+.s.scrolled {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.30);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: #F9EDE4;
+}
+
+
+/* =========================
+   NAVIGATION
+   منوی ناوبری
+========================= */
+
+/* دکمه‌ی باز و بسته کردن منو (موبایل) */
+.menuToggle {
+  padding: 8px 16px;
+  color: var(--cream);
+  background-color: var(--red-light);
+  border-radius: 12px;
+  font-size: 16px;
+  height: 40px;
+}
+
+/* نوار ناوبری */
+nav {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  background-color: var(--cream);
+  border-bottom: 1px solid #EADBD0;
+}
+
+/* لینک‌ها به صورت پیش‌فرض مخفی هستند */
+.navLinks {
+  display: none;
+}
+
+/* حالت باز بودن منو (کلاس open با جاوا اسکریپت اضافه می‌شود) */
+.navLinks.open {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* استایل لینک‌ها */
+nav a {
+  position: relative;
+  color: var(--red-dark);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--red-light);
+}
+
+
+/* =========================
+   HERO
+   بخش هیرو (معرفی اصلی)
+========================= */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--white);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(181, 42, 50, 0.96),
+      rgba(101, 20, 26, 0.98)
+    );
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 760px;
+}
+
+/* برچسب بالای عنوان */
+.hero-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #F4D8B8;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.hero h2 {
+  margin: 0 0 18px;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #FCEFE8;
+  font-size: 17px;
+}
+
+/* دکمه‌ی هیرو */
+.hero-button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 13px 30px;
+  color: var(--red-dark);
+  background-color: var(--cream);
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+  color: var(--white);
+  background-color: var(--gold);
+}
+
+
+/* =========================
+   GENERAL SECTION
+   استایل‌های مشترک بخش‌ها
+========================= */
+
+section {
+  width: 100%;
+}
+
+/* عنوان بخش‌ها (برچسب + تیتر + توضیح) */
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.section-heading span {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 8px 0 12px;
+  color: var(--red-dark);
+  font-size: 28px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--brown-light);
+  font-size: 15px;
+}
+
+
+/* =========================
+   GALLERY
+   گالری عکس‌ها
+========================= */
+
+.gallery {
+  padding: 70px 20px;
+  background-color: var(--cream);
+}
+
+/* شبکه‌ی عکس‌ها (موبایل: یک ستون) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* عکس انتخاب‌شده (کلاس selected با جاوا اسکریپت اضافه می‌شود) */
+.photo.selected {
+  transform: scale(1.1);
+}
+
+/* کادر هر عکس */
+.photo {
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  border-radius: 16px;
+  background-color: var(--cream-dark);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* خود عکس */
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+/* افکت هاور عکس (غیرفعال شده)
+.photo:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(53, 24, 23, 0.14);
+} */
+
+/* افکت هاور داخل عکس (غیرفعال شده)
+.photo:hover img {
+  transform: scale(1.04);
+} */
+
+
+/* =========================
+   FEATURES
+   بخش ویژگی‌ها
+========================= */
+
+.features {
+  padding: 70px 20px;
+  background-color: #FFFDF9;
+}
+
+/* شبکه‌ی کارت‌ها (موبایل: یک ستون) */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* هر کارت ویژگی */
+.features-card {
+  position: relative;
+  padding: 30px 24px;
+  text-align: center;
+  background-color: var(--white);
+  border: 1px solid #EEDFD3;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.features-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--red);
+}
+
+/* شماره‌ی کارت */
+.card-number {
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.features-card h3 {
+  margin: 0 0 12px;
+  color: var(--red-dark);
+  font-size: 21px;
+}
+
+.features-card p {
+  margin: 0;
+  color: var(--brown-light);
+  font-size: 15px;
+}
+
+
+/* =========================
+   CONTACT
+   بخش تماس و فرم
+========================= */
+
+.contact {
+  padding: 70px 20px;
+  background-color: var(--cream-dark);
+}
+
+/* فرم */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+label {
+  color: var(--brown);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* فیلدهای ورودی و متن */
+input,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--brown);
+  background-color: var(--white);
+  border: 1px solid #DCC9BA;
+  border-radius: 9px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* حالت فوکوس فیلدها */
+input:focus,
+textarea:focus {
+  border-color: var(--red);
+  box-shadow:
+    0 0 0 3px rgba(143, 29, 37, 0.1);
+}
+
+/* دکمه‌ی ارسال فرم */
+form button {
+  margin-top: 8px;
+  padding: 13px 20px;
+  color: var(--white);
+  background-color: var(--red);
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+   فوتر صفحه
+========================= */
+
+footer {
+  padding: 25px 20px;
+  text-align: center;
+  color: #EEDFD3;
+  background-color: var(--red-dark);
+  font-size: 13px;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* =========================
+   TABLET
+   تبلت (از ۷۶۸ پیکسل به بالا)
+========================= */
+
+@media (min-width: 768px) {
+
+  /* ناوبری افقی و وسط‌چین */
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  /* گالری و ویژگی‌ها: دو ستون */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   DESKTOP
+   دسکتاپ (از ۱۰۲۴ پیکسل به بالا)
+========================= */
+
+@media (min-width: 1024px) {
+
+  header {
+    padding: 38px 20px;
+  }
+
+  /* دکمه‌ی منوی موبایل در دسکتاپ مخفی است */
+  .menuToggle {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 38px;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero h2 {
+    font-size: 46px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* فاصله‌ی بیشتر بخش‌ها */
+  .gallery,
+  .features,
+  .contact {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  /* گالری و ویژگی‌ها: سه ستون */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* شبکه‌ی منوی کافه: سه ستون */
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* کارت هر آیتم منو */
+  .memu_item {
+    color: #faf6f6;
+    background-color: #942b32;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin: 20px 10px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <!-- تنظیمات پایه‌ی صفحه -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- عنوان صفحه (نمایش در تب مرورگر و نتایج گوگل) -->
+  <title>کافه رد وال | فضای دلنشین، صبحانه و نوشیدنی‌های متنوع</title>
+
+  <!-- تنظیمات سئو -->
+  <meta name="description"
+    content="کافه رد وال؛ فضایی دلنشین برای دورهمی دوستانه، همراه با صبحانه‌های متنوع، نوشیدنی‌های گرم و سرد و دسرهای خوشمزه.">
+  <meta name="robots" content="index, follow">
+
+  <!-- فایل استایل -->
+  <link rel="stylesheet" href="landing.css">
+</head>
+
+
+<body>
+
+  <!-- ==================== هدر ==================== -->
+  <header class="s">
+    <h1>کافه رد وال</h1>
+
+    <p>
+      جایی برای یک فنجان قهوه، یک گفت‌وگوی خوب و یک خاطره دلنشین
+    </p>
+  </header>
+
+
+  <!-- ==================== منوی ناوبری ==================== -->
+  <nav aria-label="منوی اصلی">
+
+    <!-- دکمه‌ی باز و بسته کردن منو (موبایل) -->
+    <button id="menuToggle" class="menuToggle">
+      ⁞
+    </button>
+
+    <!-- لینک‌های ناوبری -->
+    <div id="navLinks" class="navLinks">
+      <a href="#home">صفحه اصلی</a>
+      <a href="#about">درباره کافه</a>
+      <a href="#menu">منو</a>
+      <a href="#gallery">گالری</a>
+      <a href="#contact">تماس با ما</a>
+    </div>
+
+  </nav>
+
+
+  <!-- ==================== محتوای اصلی ==================== -->
+  <main>
+
+    <!-- ---------- بخش هیرو (معرفی اصلی) ---------- -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+
+        <span class="hero-label">
+          RED WALL CAFE
+        </span>
+
+        <h2>
+          کافه رد وال؛ جایی برای دورهمی و حال خوب
+        </h2>
+
+        <p>
+          در فضای دلنشین رد وال کنار دوستانتان بنشینید،
+          از نوشیدنی‌های خوش‌طعم لذت ببرید و لحظات خوبی را تجربه کنید.
+        </p>
+
+        <!-- لینک اطلاعات بیشتر -->
+        <a class="hero-button" href="#contact">
+          اطلاعات بیشتر
+        </a>
+
+        <!-- دکمه‌ی هیرو (با جاوا اسکریپت کنترل می‌شود) -->
+        <button class="heroBtn">پول رایگان</button>
+
+      </div>
+    </section>
+
+
+    <!-- ---------- بخش گالری ---------- -->
+    <section class="gallery" id="gallery">
+
+      <!-- عنوان بخش -->
+      <div class="section-heading">
+        <span>
+          RED WALL
+        </span>
+
+        <h2>
+          فضای کافه رد وال
+        </h2>
+
+        <p>
+          محیطی صمیمی و دلنشین برای قرارهای دوستانه،
+          نوشیدن یک قهوه و گذراندن ساعاتی آرام.
+        </p>
+      </div>
+
+      <!-- شبکه‌ی عکس‌ها -->
+      <div class="gallery-grid">
+
+        <div class="photo">
+          <img src="https://caferedwall.ir/wp-content/uploads/2024/10/46-1-200x300.jpg" alt="فضای داخلی کافه رد وال"
+            loading="lazy">
+        </div>
+
+        <div class="photo">
+          <img src="https://caferedwall.ir/wp-content/uploads/2024/09/2-200x300.jpg" alt="محیط کافه رد وال برای دورهمی"
+            loading="lazy">
+        </div>
+
+        <div class="photo">
+          <img src="https://caferedwall.ir/wp-content/uploads/2025/10/IMG_1797.JPEG-200x300.jpg"
+            alt="فضای سبز و محوطه کافه رد وال" loading="lazy">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ---------- بخش ویژگی‌ها (درباره کافه) ---------- -->
+    <section class="features" id="about">
+
+      <!-- عنوان بخش -->
+      <div class="section-heading">
+        <span>
+          ABOUT RED WALL
+        </span>
+
+        <h2>
+          چرا کافه رد وال؟
+        </h2>
+
+        <p>
+          رد وال فضایی برای تجربه یک صبحانه دلچسب،
+          نوشیدنی خوب و یک دورهمی دوستانه است.
+        </p>
+      </div>
+
+      <!-- کارت‌های ویژگی -->
+      <div class="features-grid">
+
+        <!-- کارت ۱: فضای دلنشین -->
+        <article class="features-card">
+          <div class="card-number">
+            01
+          </div>
+
+          <h3>
+            فضای دلنشین
+          </h3>
+
+          <p>
+            محیطی آرام و صمیمی با فضای سبز و حوض،
+            مناسب برای استراحت، گفت‌وگو و دورهمی دوستانه.
+          </p>
+        </article>
+
+        <!-- کارت ۲: منوی متنوع (مقصد لینک «منو» در ناوبری) -->
+        <article class="features-card" id="menu">
+          <div class="card-number">
+            02
+          </div>
+
+          <h3>
+            منوی متنوع
+          </h3>
+
+          <p>
+            از صبحانه‌های متنوع تا نوشیدنی‌های گرم و سرد
+            و دسرهای خوشمزه؛ انتخابی برای سلیقه‌های مختلف.
+          </p>
+        </article>
+
+        <!-- کارت ۳: مناسب دورهمی -->
+        <article class="features-card">
+          <div class="card-number">
+            03
+          </div>
+
+          <h3>
+            مناسب دورهمی
+          </h3>
+
+          <p>
+            محیطی مناسب برای قرارهای دوستانه،
+            گفت‌وگو و گذراندن یک روز آرام در کنار عزیزانتان.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ---------- بخش منوی کافه (با جاوا اسکریپت پر می‌شود) ---------- -->
+    <section>
+      <h2 style="text-align: center;">منو کافه</h2>
+
+      <!-- آیتم‌های منو اینجا اضافه می‌شوند -->
+      <div class="menu" id="menuContainer"></div>
+    </section>
+
+
+    <!-- ---------- بخش تماس با ما ---------- -->
+    <section class="contact" id="contact">
+
+      <!-- عنوان بخش -->
+      <div class="section-heading">
+        <span>
+          CONTACT
+        </span>
+
+        <h2>
+          با کافه رد وال در ارتباط باشید
+        </h2>
+
+        <p>
+          برای دریافت اطلاعات بیشتر، پیشنهادها یا پرسش‌های خود
+          می‌توانید با ما در ارتباط باشید.
+        </p>
+      </div>
+
+      <!-- فرم تماس -->
+      <form>
+
+        <!-- فیلد نام -->
+        <label for="name">
+          نام
+        </label>
+        <input type="text" id="name" name="name" placeholder="مثلاً نیما" autocomplete="name">
+
+        <!-- فیلد ایمیل -->
+        <label for="email">
+          ایمیل
+        </label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+
+        <!-- فیلد پیام -->
+        <label for="msg">
+          پیام شما
+        </label>
+        <textarea id="msg" name="message" rows="5" placeholder="پیامتان را بنویسید..."></textarea>
+
+        <!-- دکمه‌ی ارسال -->
+        <button type="submit">
+          ارسال پیام
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- پیام وضعیت فرم (خطا یا موفقیت) -->
+    <p id="formMsg"></p>
+
+  </main>
+
+
+  <!-- ==================== فوتر ==================== -->
+  <footer>
+    <p>
+      © 2026 کافه رد وال | تمامی حقوق محفوظ است.
+    </p>
+  </footer>
+
+
+  <!-- ==================== اسکریپت ==================== -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>
